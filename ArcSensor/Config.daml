@@ -1,0 +1,37 @@
+﻿<ArcGIS defaultAssembly="ArcSensor.dll" defaultNamespace="ArcSensor" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{1c058b10-02ef-42c9-a291-ada72b9bd23f}" version="1.0" desktopVersion="2.0.8933">
+    <Name>ArcSensor</Name>
+    <Description>ArcSensor description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>bertt</Author>
+    <Company>Acme</Company>
+    <Date>10/3/2017 2:33:56 PM, 2017</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="ArcSensor_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="ArcSensor_Tab1" caption="New Tab">
+          <group refID="ArcSensor_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="ArcSensor_Group1" caption="ArcSensor" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <button refID="ArcSensor_Button1" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="ArcSensor_Button1" caption="Button 1" className="Button1" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
