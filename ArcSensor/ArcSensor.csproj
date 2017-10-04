@@ -139,6 +139,18 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\GenericButtonRed16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\GenericButtonRed32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="DarkImages\GenericButtonRed16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="DarkImages\GenericButtonRed32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--
   PackageAction can be:

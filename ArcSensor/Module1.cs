@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Input;
+﻿using ArcGIS.Core.CIM;
 using ArcGIS.Desktop.Framework;
 using ArcGIS.Desktop.Framework.Contracts;
+using ArcGIS.Desktop.Framework.Threading.Tasks;
+using ArcGIS.Desktop.Mapping;
 using System.Threading.Tasks;
 
 namespace ArcSensor
@@ -22,6 +20,13 @@ namespace ArcSensor
             {
                 return _this ?? (_this = (Module1)FrameworkApplication.FindModule("ArcSensor_Module"));
             }
+        }
+
+        internal static Task<CIMPointSymbol> CreatePointSymbolAsync()
+        {
+            return QueuedTask.Run(() => {
+                return SymbolFactory.Instance.ConstructPointSymbol(ColorFactory.Instance.RedRGB, 22, SimpleMarkerStyle.Star);
+            });
         }
 
         #region Overrides
