@@ -24,11 +24,15 @@
         <group id="ArcSensor_Group1" caption="ArcSensor" appearsOnAddInTab="true">
           <!-- host controls within groups -->
           <button refID="ArcSensor_Button1" size="large" />
+          <button refID="ArcSensor_FetchLocationsButton" size="large" />
         </group>
       </groups>
       <controls>
         <!-- add your controls here -->
-        <button id="ArcSensor_Button1" caption="Button 1" className="Button1" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png">
+        <button id="ArcSensor_Button1" caption="Initialize DB" className="InitDbButton" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="ArcSensor_FetchLocationsButton" caption="Get Locations" className="FetchLocationsButton" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png">
           <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
         </button>
       </controls>
