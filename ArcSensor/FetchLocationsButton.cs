@@ -22,7 +22,7 @@ namespace ArcSensor
         {
             var map = MapView.Active.Map;
 
-            var fl = FeatureClassCreator.GetFeatureLayer(map, Settings.Tablename);
+            var fl = FeatureClassCreator.GetFeatureLayer(map, Settings.StLocationsTablename);
 
             SetRenderer(fl);
             var count = await FeatureClassCreator.GetCount(fl);

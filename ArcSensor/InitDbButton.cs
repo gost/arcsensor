@@ -18,15 +18,10 @@ namespace ArcSensor
         {
             if (MapView.Active.Map != null)
             {
-                var tablename = Settings.Tablename;
+                var tablename = Settings.StLocationsTablename;
 
-                var projGDBPath = Project.Current.DefaultGeodatabasePath;
+                var projGDBPath = Settings.STGdb;
                 var gdb = new Geodatabase(new FileGeodatabaseConnectionPath(new Uri(projGDBPath)));
-
-                if (!gdb.HasFeatureClass(Settings.Tablename))
-                {
-                    var created = await InitDb(MapView.Active.Map, projGDBPath, tablename);
-                }
 
                 var pointFeatureLayer = FeatureClassCreator.GetFeatureLayer(MapView.Active.Map, tablename);
 
