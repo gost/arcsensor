@@ -1,6 +1,6 @@
 ﻿using ArcGIS.Core.Data;
 
-namespace ArcSensor
+namespace ArcSensor.COre
 {
     public static class GeodatabaseExtensions
     {

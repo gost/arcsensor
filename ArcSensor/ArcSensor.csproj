@@ -123,12 +123,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FetchLocationsButton.cs" />
-    <Compile Include="InitDbButton.cs" />
-    <Compile Include="FeatureClassCreator.cs" />
-    <Compile Include="GeodatabaseExtensions.cs" />
+    <Compile Include="Core\FeatureClassCreator.cs" />
+    <Compile Include="Core\GeodatabaseExtensions.cs" />
     <Compile Include="Module1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
+    <Compile Include="Core\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <AddInContent Include="Images\GenericButtonBlue16.png" />
@@ -170,7 +169,7 @@
     <AddInContent Include="DarkImages\GenericButtonOrange32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="initdb.py" />
+    <Content Include="scripts\initdb.py" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--
